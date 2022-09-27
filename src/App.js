@@ -13,7 +13,7 @@ import AddTask from './components/AddTask';
 
 const App = () => {
 
-  const [toggleAdd, setToggleAdd ] = useState(false)
+  const [toggleAdd, setToggleAdd ] = useState(true)
 
     const [tasks, setTasks] = useState([ //state
     {
@@ -40,7 +40,7 @@ const addTask = (task) => { //props
   const id = Math.floor(Math.random() * 10000) +1
   const newTask = { id, ...task }
   setTasks([ ...tasks, newTask ]) //state
-  console.log(task, id )
+  console.log('Added task >>> ', task, id )
 }
 
 const deleteTask = (id) => {
@@ -55,7 +55,7 @@ const toggleReminder = (id) => {
 
   return (
     <div className="container" id='block'>
-      <Header />   
+      <Header onAdd={() => setToggleAdd(!setToggleAdd)} showAddButton={toggleAdd}  />   
       {toggleAdd && 
         <AddTask 
       onAdd={addTask}  //onAdd the attribute is going to the component for linkage / hooking
@@ -64,7 +64,8 @@ const toggleReminder = (id) => {
       {/* <Header title='Hello...' />  overrides the defaultProps set in Header component*/}
       {/* <h1>Hello {name}</h1>
     <p>{x ? 'Yes': 'No'}</p> */}
-    {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No tasks added yet'}
+    {tasks.length > 0 ? (
+    <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> ) : ('No tasks added yet')}
     </div>
   );
 }

@@ -5,13 +5,13 @@ import PropTypes from 'prop-types' /* impt */
 import Button from './Button'
 
 
-export const Header = ({ title }) => {   /* destructured */
+export const Header = ({ title, onAdd, showAddButton }) => {   /* destructured */
 
 // const onClick = (e) => {
 //     console.log(e)
-const onClick = () => {
-    console.log('pressed add button')
-}
+// const onClick = () => {
+//     console.log('pressed add button')
+// }
 
 
   return (
@@ -19,7 +19,7 @@ const onClick = () => {
         <header className="header">
         {/* <h1 style={{color: 'blue' }}>{title}</h1> */}
         <h1>{title}</h1>
-        <Button text='Add' color='green' onClick={onClick}/>
+        <Button text={showAddButton ? 'Close' : 'Add'} color={showAddButton ? 'red' : 'green'} onClick={onAdd}/>
         {/* <Button text='Delete' color='red' /> */}
     </header>
   )
