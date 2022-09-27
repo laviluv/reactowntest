@@ -231,10 +231,15 @@ li:nth-child(7) {
   box-shadow: inset 2.4px -0.8px 0 0px #414043;
 }
 
+#block {
+  display: block;
+  text-align: center;
+}
+
 .p{
   z-index: -1;
   position:fixed;
-  left:0px;
+  left:20px;
   top:50px;
   width:1px;
   height:1px;

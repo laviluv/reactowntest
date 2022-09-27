@@ -20,7 +20,7 @@ const onClick = () => {
         {/* <h1 style={{color: 'blue' }}>{title}</h1> */}
         <h1>{title}</h1>
         <Button text='Add' color='green' onClick={onClick}/>
-        <Button text='Delete' color='red' />
+        {/* <Button text='Delete' color='red' /> */}
     </header>
   )
 }
