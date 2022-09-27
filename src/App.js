@@ -13,7 +13,9 @@ import AddTask from './components/AddTask';
 
 const App = () => {
 
-  const [tasks, setTasks] = useState([ //state
+  const [toggleAdd, setToggleAdd ] = useState(false)
+
+    const [tasks, setTasks] = useState([ //state
     {
         id: 1,
         text: 'to do 1',
@@ -54,9 +56,11 @@ const toggleReminder = (id) => {
   return (
     <div className="container" id='block'>
       <Header />   
-      <AddTask 
+      {toggleAdd && 
+        <AddTask 
       onAdd={addTask}  //onAdd the attribute is going to the component for linkage / hooking
       />
+}
       {/* <Header title='Hello...' />  overrides the defaultProps set in Header component*/}
       {/* <h1>Hello {name}</h1>
     <p>{x ? 'Yes': 'No'}</p> */}
