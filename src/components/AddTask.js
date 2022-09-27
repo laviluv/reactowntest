@@ -6,6 +6,7 @@ const AddTask = (
     { onAdd }
     ) => {
 
+        //hooks
   const [text, setText] = useState('')  
   const [day, setDay] = useState('')  
   const [reminder, setReminder] = useState(false)  

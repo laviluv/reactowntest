@@ -13,7 +13,7 @@ import AddTask from './components/AddTask';
 
 const App = () => {
 
-  const [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState([ //state
     {
         id: 1,
         text: 'to do 1',
@@ -34,8 +34,11 @@ const App = () => {
     },
 ])
 
-const addTask = (task) => { //hook
- console.log(task)
+const addTask = (task) => { //props
+  const id = Math.floor(Math.random() * 10000) +1
+  const newTask = { id, ...task }
+  setTasks([ ...tasks, newTask ]) //state
+  console.log(task, id )
 }
 
 const deleteTask = (id) => {
@@ -44,7 +47,7 @@ const deleteTask = (id) => {
 }
 
 const toggleReminder = (id) => {
-  setTasks(tasks.map((task) => task.id === id ? { ...task, reminder: !task.reminder } : task))
+  setTasks(tasks.map((task) => task.id === id ? { ...task, reminder: !task.reminder } : task))  //state
   console.log(id)
 }
 

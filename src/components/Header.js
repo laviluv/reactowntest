@@ -26,7 +26,7 @@ const onClick = () => {
 }
 
 Header.defaultProps = {
-    title: '>> Task Tracker',
+    title: '>>> Task Tracker',
 }
 
 Header.propTypes = {
