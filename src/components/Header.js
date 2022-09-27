@@ -15,7 +15,8 @@ const onClick = () => {
 
 
   return (
-    <header className="header" style={headingStyle}>
+    // <header className="header" style={headingStyle}>
+        <header className="header">
         {/* <h1 style={{color: 'blue' }}>{title}</h1> */}
         <h1>{title}</h1>
         <Button text='Add' color='green' onClick={onClick}/>
@@ -32,8 +33,8 @@ Header.propTypes = {
     title: PropTypes.string.isRequired,
 }
 
-const headingStyle = {
-    backgroundColor: 'gray',
-    color: 'blue',
-}
+// const headingStyle = {
+//     backgroundColor: 'gray',
+//     color: 'blue',
+// }
 export default Header;
