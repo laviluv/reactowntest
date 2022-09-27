@@ -10,7 +10,7 @@ export const Header = ({ title }) => {   /* destructured */
 // const onClick = (e) => {
 //     console.log(e)
 const onClick = () => {
-    console.log('click from header')
+    console.log('pressed add button')
 }
 
 
@@ -26,7 +26,7 @@ const onClick = () => {
 }
 
 Header.defaultProps = {
-    title: 'Task Tracker',
+    title: '>> Task Tracker',
 }
 
 Header.propTypes = {

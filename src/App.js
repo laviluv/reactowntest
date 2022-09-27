@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import { useState } from 'react'
-import { FaClock } from 'react-icons/fa';
+import AddTask from './components/AddTask';
 
 // const name = 'Lavi'
 // const x=true
@@ -10,7 +10,7 @@ import { FaClock } from 'react-icons/fa';
 //     <h5>Hi React:)</h5>
 //   )
 // }  
-// Comment  
+
 const App = () => {
 
   const [tasks, setTasks] = useState([
@@ -34,6 +34,9 @@ const App = () => {
     },
 ])
 
+const addTask = (task) => { //hook
+ console.log(task)
+}
 
 const deleteTask = (id) => {
   setTasks(tasks.filter((task) => task.id !== id))
@@ -46,12 +49,15 @@ const toggleReminder = (id) => {
 }
 
   return (
-    <div className="container">
+    <div className="container" id='block'>
       <Header />   
+      <AddTask 
+      onAdd={addTask}  //onAdd the attribute is going to the component for linkage / hooking
+      />
       {/* <Header title='Hello...' />  overrides the defaultProps set in Header component*/}
       {/* <h1>Hello {name}</h1>
     <p>{x ? 'Yes': 'No'}</p> */}
-    <p id='block'>{tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No tasks added yet'}</p>
+    {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : 'No tasks added yet'}
     </div>
   );
 }
