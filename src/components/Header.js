@@ -19,7 +19,10 @@ export const Header = ({ title, onAdd, showAddButton }) => {   /* destructured *
         <header className="header">
         {/* <h1 style={{color: 'blue' }}>{title}</h1> */}
         <h1>{title}</h1>
-        <Button text={showAddButton ? 'Close' : 'Add'} color={showAddButton ? 'red' : 'green'} onClick={onAdd}/>
+        <Button 
+        text={showAddButton ? 'Close' : 'Add'} 
+        color={showAddButton ? 'red' : 'green'} 
+        onClick={onAdd}/>
         {/* <Button text='Delete' color='red' /> */}
     </header>
   )

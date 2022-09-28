@@ -39,13 +39,12 @@ const Tasks = ( { tasks, onDelete, onToggle }) =>
 {
     return (
         <>
-            {tasks.map((task) => (
+            {tasks.map((task, index) => (
                 // <h3 key={task.id}>{task.text}</h3>
                 
                    // {/* <h3 key={task.id}>{task.text}</h3> */}
                     <Task key={task.id} task={task} onDelete={onDelete} onToggle={onToggle} />
                    // {/* <p>{task.day}</p> */}
-
             ))}
         </>
     )
