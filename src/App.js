@@ -2,7 +2,15 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import { useState, useEffect } from "react";
 import AddTask from "./components/AddTask";
-
+import Footer from "./components/Footer";
+import About from "./components/About";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import ReactDOM from 'react-dom';
 // const name = 'Lavi'
 // const x=true
 // function title*() {
@@ -108,6 +116,7 @@ const App = () => {
   };
 
   return (
+    <Router>
     <div className="container" id="block">
       <Header
         onAdd={() => setToggleAdd(!toggleAdd)}
@@ -126,7 +135,10 @@ const App = () => {
       ) : (
         "No tasks added yet"
       )}
+      <Link path="/about" component={About} />
+      <Footer />
     </div>
+    </Router>
   );
 };
 
