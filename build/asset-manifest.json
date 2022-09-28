@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bdde4e63.css",
+    "main.js": "/static/js/main.14d43bbd.js",
+    "static/js/787.ee9578eb.chunk.js": "/static/js/787.ee9578eb.chunk.js",
+    "static/media/paul-volkmer-qVotvbsuM_c-unsplash.jpg": "/static/media/paul-volkmer-qVotvbsuM_c-unsplash.8e6bee5a8646f9497301.jpg",
+    "index.html": "/index.html",
+    "main.bdde4e63.css.map": "/static/css/main.bdde4e63.css.map",
+    "main.14d43bbd.js.map": "/static/js/main.14d43bbd.js.map",
+    "787.ee9578eb.chunk.js.map": "/static/js/787.ee9578eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bdde4e63.css",
+    "static/js/main.14d43bbd.js"
+  ]
+}
